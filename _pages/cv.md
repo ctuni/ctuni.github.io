@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Biotechnology, Universitat Autonòma de Barcelona (UAB), 2019
+* M.S. in Omics Data Analysis, Universitat de Barcelona-Universitat de Vic (UB-UVIC-UCC), 2020
+* Ph.D in Biomedicine, Universitat Pompeu Fabra (UPF), 2025 (expected)
 
 Work experience
 ======
@@ -42,12 +42,12 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+   -->
 Teaching
 ======
   <ul>{% for post in site.teaching %}
