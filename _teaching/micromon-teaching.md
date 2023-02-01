@@ -17,6 +17,8 @@ The mission of the program is twofold.
 First, it seeks to encourage students to pursue careers in science and increase scientific literacy through real-world applicable laboratory and field research in introductory courses.
 Second, it aims to address a worldwide health threat – the diminishing supply of effective antibiotics – by tapping into the collective power of many student researchers concurrently tackling the same challenge, living up to its motto “crowdsourcing antibiotic discovery.”™
 
+
+
 Tasks carried out
 ======
 
