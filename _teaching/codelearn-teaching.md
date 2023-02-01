@@ -10,11 +10,11 @@ location: "Barcelona, Spain"
 
 Programming & Robotics teacher at extracurricular activity center for children aged 7 to 18.
 
-Heading 1
+Description
 ======
 
-Heading 2
+Tasks carried out
 ======
 
-Heading 3
+What I learned from it
 ======
