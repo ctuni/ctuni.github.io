@@ -4,7 +4,7 @@ collection: teaching
 type: "Extracurricular activity"
 permalink: /teaching/codelearn-teaching
 venue: "Codelearn Eixample Dret"
-date: 2021
+date: 2021-01-01
 location: "Barcelona, Spain"
 ---
 

@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate Course"
 permalink: /teaching/micromon-teaching
 venue: "Universitat Autonoma de Barcelona"
-date: 2018
+date: 2018-01-01
 location: "Barcelona, Spain"
 ---
 
