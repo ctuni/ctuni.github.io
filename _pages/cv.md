@@ -57,4 +57,5 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Active member of `nf-core` and `Nextflow` Slack spaces.
+* Safety officer for `nf-core` Hackathons since 2021. 

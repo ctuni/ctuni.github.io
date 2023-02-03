@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Filler text
+About me
+
+My name is Cristina Tuñí Domínguez and I am a Bioinformatics Scientist from Barcelona.
 
 Filler title
 ======
