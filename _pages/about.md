@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-About me
-
 My name is Cristina Tuñí Domínguez and I am a Bioinformatics Scientist from Barcelona.
 
-Filler title
+Bioinformatics
 ======
-More filler text
+I am working at Flomics Biotech, a biotech start-up whose objective is developing a non-invasive, liquid biopsy diagnostic test for the early diagnosis of several cancer types. 
+
+Centering on colorectal cancer, I am also getting my PhD in Biomedicine at Universitat Pomeu Fabra.
 
 Filler sub-title
 ------

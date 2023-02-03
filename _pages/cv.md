@@ -15,18 +15,26 @@ Education
 * M.S. in Omics Data Analysis, Universitat de Barcelona-Universitat de Vic (UB-UVIC-UCC), 2020
 * Ph.D in Biomedicine, Universitat Pompeu Fabra (UPF), 2025 (expected)
 
-Work experience
+Relevant work experience
 ======
 * February 2021-Present: Bioinformatics Scientist
   * Flomics Biotech S.L.
-  * Duties included: Tagging issues
-  <!-- * Supervisor: Professor Git -->
+  * Duties included: Data analysis, pipeline development, bioinformatics platform management, training new pipeline developers.
 
-<!-- * Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub -->
+* October 2019-February 2021: Manager and instructor
+  * Codelearn Eixample Dret
+  * Duties included: Managing the center (enrollments, communication with parents, scheduling, etc) and teaching.
+
+* April 2020-September 2020: Master's Thesis Internship
+  * IRB; Ribas Lab
+  * Participated in an ongoing project developing `tRNAstudio` (more info in "Publications")
+  * Thesis title: "Development of an tRNA analysis pipeline."
   
+* October 2018-June 2019: Final Degree Thesis Internship
+  * IMIM; MARgenomics
+  * Carried on benchmarking of several RNA-seq aligners and found optimal parameters for the work that was being done.
+  * Thesis title: "Genomic data analysis and its implications on biology and biotechnology: Benchmarking of RNA-seq alignment tools."
+
 Skills
 ======
 <!-- * Skill 1
@@ -58,4 +66,4 @@ Teaching
 Service and leadership
 ======
 * Active member of `nf-core` and `Nextflow` Slack spaces.
-* Safety officer for `nf-core` Hackathons since 2021. 
+* Safety officer for `nf-core` Hackathons and member of the nf-core's Outreach team since 2021. 
