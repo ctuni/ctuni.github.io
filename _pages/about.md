@@ -36,7 +36,7 @@ Other than a passionate bioinformatician with a keen interest in divulgation and
 * Music: I work better when listening to [ambient black metal](https://open.spotify.com/playlist/4LZLdTHDi8OD5yNtM74d5j?si=406bf3a9d8e84430).
 * RPGs: Both in videogame format or table-top.
 * My cats: We have two rescue cats called Cornèlia and Tilda who also enjoy everything mentioned above.
-![Cornèlia and Tilda](/images/cornitildi.jpg)
+
 <img src="/images/cornitildi.jpg"  width="60%">
 
 
