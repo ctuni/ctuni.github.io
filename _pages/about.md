@@ -37,6 +37,6 @@ Other than a passionate bioinformatician with a keen interest in divulgation and
 * RPGs: Both in videogame format or table-top.
 * My cats: We have two rescue cats called Cornèlia and Tilda who also enjoy everything mentioned above.
 
-<img src="/images/cornitildi.jpg"  width="60%">
+<img src="/images/cornitildi.jpg"  width="30%">
 
 
