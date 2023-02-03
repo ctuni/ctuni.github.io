@@ -32,7 +32,7 @@ Miscellaneous
 ------
 Other than a passionate bioinformatician with a keen interest in divulgation and teaching, I also like and enjoy:
 * Hiking: The north of Catalonia has breathtaking mountain ranges where I go get lost for a couple of days whenever I can.
-* Sustainability: Specially interest in the change we, individuals, can make if we change our consumer habits.
+* Sustainability: Specially interested in the change we, individuals, can make if we change our consumer habits.
 * Music: I work better when listening to [ambient black metal](https://open.spotify.com/playlist/4LZLdTHDi8OD5yNtM74d5j?si=406bf3a9d8e84430).
 * RPGs: Both in videogame format or table-top.
 * My cats: We have two rescue cats called Cornèlia and Tilda who also enjoy everything mentioned above.
