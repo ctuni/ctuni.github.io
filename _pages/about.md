@@ -26,7 +26,7 @@ I also have a deep interest in scientific communication and outreach initiatives
 
 Because of this I have participated in several of those initiatives as a scientist, and I take the opportunity to do it again whenever it arises.
 
-Also, I used to work as a programming & robotics instructor for children aged 8 to 17
+Also, I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.
 
 Miscellaneous
 ------
