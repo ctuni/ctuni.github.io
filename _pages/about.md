@@ -16,6 +16,10 @@ I am working at Flomics Biotech, a biotech start-up whose objective is developin
 
 Centering on colorectal cancer, I am also getting my PhD in Biomedicine at Universitat Pomeu Fabra.
 
+My other duties include developing bioinformatics analysis pipelines ready and easy to use for our users. Those pipelines are developed using Nextflow as the workflow orchestrator, and the internal scripts include Bash, R, Python, and Perl.
+
+All of the work mentioned above is carried out using Amazon Web Services, thus my duties also include setting up and modifying the cloud infrastructure to cater to the analysis and pipeline's needs.
+
 Filler sub-title
 ------
 With even more filler text.

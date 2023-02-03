@@ -10,6 +10,6 @@ citation: 'Marina Murillo-Recio, Ignacio Miguel Martínez de Lejarza Samper, Cri
 ---
 This paper is about "tRNAstudio", a computer program that facilitates the analysis of tRNA-Seq datasets and extracts information on tRNA gene expression, post-transcriptional tRNA modification levels, and tRNA processing steps.
 
-[Download paper here](http://ctuni.github.io/files/trnastudio.pdf)
+**[Download paper here](http://ctuni.github.io/files/trnastudio.pdf)**
 
-[Read online here](https://academic.oup.com/bioinformatics/article/38/10/2934/6564658?login=false)
+**[Read online here](https://academic.oup.com/bioinformatics/article/38/10/2934/6564658?login=false)**
