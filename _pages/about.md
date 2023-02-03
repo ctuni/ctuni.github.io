@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Cristina Tuñí Domínguez and I am a Bioinformatics Scientist from Barcelona.
+My name is Cristina Tuñí i Domínguez and I am a Bioinformatics Scientist from Barcelona.
 
 Bioinformatics
 ======
