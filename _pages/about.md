@@ -26,6 +26,8 @@ I also have a deep interest in scientific communication and outreach initiatives
 
 Because of this I have participated in several of those initiatives as a scientist, and I take the opportunity to do it again whenever it arises.
 
+Also, I used to work as a programming & robotics instructor for children aged 8 to 17
+
 Miscellaneous
 ------
 Other than a passionate bioinformatician with a keen interest in divulgation and teaching, I also like and enjoy:
@@ -35,3 +37,6 @@ Other than a passionate bioinformatician with a keen interest in divulgation and
 * RPGs: Both in videogame format or table-top.
 * My cats: We have two rescue cats called Cornèlia and Tilda who also enjoy everything mentioned above.
 ![Cornèlia and Tilda](/images/cornitildi.jpg)
+<img src="/images/cornitildi.jpg"  width="60%">
+
+
