@@ -8,6 +8,6 @@ In today's world, creative professions like emerging fashion designers need to h
 
 Fortunately for me (and for my learning), my partner, who is a fashion designer, needed a website! Thanks to my already existing basic knowledge on web design, I was able to learn by doing her website. 
 
-This process included everything: from domain parking, to hosting, to the design of the responsive website itself. The end product is a website build using the `Substance` Bootstrap website template, Google Domains, and Github Pages.
+This process included everything: from domain parking, to hosting, to the design of the responsive website itself. The end product is a website built using the `Substance` Bootstrap website template, Google Domains, and Github Pages.
 
-Since an image is worth a thousand words, and I then guess a website will be worth ten thousand words. Check the result for yourself [here](https://www.carlacanadell.com)!
+Since an image is worth a thousand words, then I guess a website will be worth ten thousand words. Check the result for yourself [here](https://www.carlacanadell.com)!
