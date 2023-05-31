@@ -10,4 +10,4 @@ Fortunately for me (and for my learning), my partner, who is a fashion designer,
 
 This process included everything: from domain parking, to hosting, to the design of the responsive website itself. The end product is a website build using the `Substance` Bootstrap website template, Google Domains, and Github Pages.
 
-Since an image is worth a thousand words, and I then guess a website will be worth ten thousand words. Check the result for yourself [here](www.carlacanadell.com)!
+Since an image is worth a thousand words, and I then guess a website will be worth ten thousand words. Check the result for yourself [here](https://www.carlacanadell.com)!
