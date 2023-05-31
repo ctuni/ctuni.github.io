@@ -38,9 +38,9 @@ Relevant work experience
 Skills
 ======
 * Knowledgeable in the following languages:
-  * R
-  * Phython
-  * Nextflow
+  * R: data analysis and appealing interactive visualizations with packages such as `DT`, `plotly`, and `htmldashboard`.
+  * Phython: data analysis and visualization with packages such as `pandas` and `matplotlib`.
+  * Nextflow: creation of DSL2 analysis pipelines, with special interest in reproducibility and user-friendliness.
   * Perl
   * Bash
 * Omic-data analysis, specially:
