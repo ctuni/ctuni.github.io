@@ -19,7 +19,7 @@ Relevant work experience
 ======
 * **February 2021-Present: Bioinformatics Scientist**
   * Flomics Biotech S.L.
-  * Duties included: Data analysis, pipeline development, bioinformatics platform management, training new pipeline developers.
+  * Duties include: Data analysis, PhD project, pipeline development, bioinformatics platform management, training new pipeline developers.
 
 * **October 2019-February 2021: Manager and instructor**
   * Codelearn Eixample Dret
@@ -37,12 +37,17 @@ Relevant work experience
 
 Skills
 ======
-<!-- * Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3 -->
+* Knowledgeable in the following languages:
+  * R
+  * Phython
+  * Nextflow
+  * Perl
+  * Bash
+* Omic-data analysis, specially:
+  * Transcriptomics
+  * Metagenomics
+* AWS
+* Docker, Singularity, Conda, Git, and other helper tools for Bioinformatics
 
 Publications
 ======
@@ -65,5 +70,5 @@ Teaching
   
 Service and leadership
 ======
-* Active member of `nf-core` and `Nextflow` Slack spaces.
+* Active member of `nf-core` and `Nextflow` projects and Slack spaces, contributing to `viralrecon`, `rnaseq`, `ampliseq`, and `differentialabundance` pipelines.
 * Safety officer for `nf-core` Hackathons and member of the nf-core's Outreach team since 2021. 
