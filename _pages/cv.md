@@ -62,7 +62,7 @@ Publications
   {% endfor %}</ul> -->
   
 
-Teaching
+Teaching & Mentoring
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
