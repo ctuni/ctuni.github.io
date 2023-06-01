@@ -19,7 +19,8 @@ Relevant work experience
 ======
 * **February 2021-Present: Bioinformatics Scientist**
   * Flomics Biotech S.L.
-  * Duties include: Data analysis, PhD project, pipeline development, bioinformatics platform management, training new pipeline developers.
+  * Duties include: Data analysis, pipeline development, bioinformatics platform management, training new pipeline developers.
+  * Carrying out my [Industrial Ph.D](https://doctoratsindustrials.gencat.cat/en/) project, with the title: "Early detection of colorectal cancer with an RNA-Seq-based liquid biopsy test".
 
 * **October 2019-February 2021: Manager and instructor**
   * Codelearn Eixample Dret
