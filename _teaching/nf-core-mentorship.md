@@ -2,13 +2,13 @@
 title: "nf-core Mentor"
 collection: teaching
 type: "Mentorship Program"
-permalink: /teaching/nf-core mentorship
+permalink: /teaching/nf-core-mentorship
 venue: "Online"
-date: 2021-01-01
+date: 2023-09-30
 location: "Barcelona, Spain"
 ---
 
-Programming & Robotics teacher at extracurricular activity center for children aged 7 to 18.
+Mentor in the third round of nf-core's [mentorship program](https://nf-co.re/mentorships), aimed at matching mentors (senior advisor) with mentees (a person receiving training from the mentor).
 
 Description
 ======
