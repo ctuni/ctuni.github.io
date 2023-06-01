@@ -12,9 +12,9 @@ My name is Cristina Tuñí i Domínguez and I am a Bioinformatics Scientist from
 
 Bioinformatics
 ======
-I am working at Flomics Biotech, a biotech start-up whose objective is developing a non-invasive, liquid biopsy diagnostic test for the early diagnosis of several cancer types. 
+I am working at [Flomics Biotech](www.flomics.com), a biotech start-up whose objective is developing a non-invasive, liquid biopsy diagnostic test for the early diagnosis of several cancer types. 
 
-Centering on colorectal cancer, I am also getting my PhD in Biomedicine at Universitat Pompeu Fabra.
+Centering on colorectal cancer analysis bioinformatics done at Flomics, I am also getting my PhD in Biomedicine at [Universitat Pompeu Fabra](https://www.upf.edu/web/phd-biomedicine/presentation).
 
 My other duties include developing bioinformatics analysis pipelines ready and easy to use for our users. Those pipelines are developed using `Nextflow` as the workflow orchestrator, and the internal scripts include `Bash`, `R`, `Python`, and `Perl`. A key point for all the pipelines developed is them having an interactive final report, with all the useful information presented in the best way to the user. These reports include interactive plots and tables, using R packages such as `DT` and `plotly`.
 
