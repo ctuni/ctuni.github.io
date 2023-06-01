@@ -47,7 +47,8 @@ Skills
   * Transcriptomics
   * Metagenomics
 * AWS
-* Docker, Singularity, Conda, Git, and other helper tools for Bioinformatics
+* Docker, Singularity, Conda, Git, CLI, and other helper tools for Bioinformatics
+* Aside from hard skills, I consider myself someone eager to learn, solve problems, and overcome obstacles by finding creative and inventive solutions while being a team-player.
 
 Publications
 ======
