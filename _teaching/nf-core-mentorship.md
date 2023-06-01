@@ -1,9 +1,9 @@
 ---
-title: "Programming & Robotics Teacher"
+title: "nf-core Mentor"
 collection: teaching
-type: "Extracurricular activity"
-permalink: /teaching/codelearn-teaching
-venue: "Codelearn Eixample Dret"
+type: "Mentorship Program"
+permalink: /teaching/nf-core mentorship
+venue: "Online"
 date: 2021-01-01
 location: "Barcelona, Spain"
 ---
