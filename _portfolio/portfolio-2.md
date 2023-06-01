@@ -1,10 +1,10 @@
 ---
 title: "Trying my hand at web design"
-excerpt: "Responsive website for a fashion designer"
+excerpt: "Responsive website for a fashion designer."
 collection: portfolio
 ---
 
-In today's world, creative professions like emerging fashion designers need to have an Internet presence, a good SEO, and a visually pleasing website, capable of showcasing their designs and transmitting the character of the designer itself. Before this project, my only knowledge of HTML and CSS was very basic (and what is Javascript?!).
+In today's world, creative professions like emerging fashion designers need to have an Internet presence, a good SEO, and a visually pleasing website, capable of showcasing their designs and transmitting the character of the designer itself. Before this project, my only knowledge of HTML and CSS was very basic (and what even is Javascript?!).
 
 Fortunately for me (and for my learning), my partner, who is a fashion designer, needed a website! Thanks to my already existing basic knowledge on web design, I was able to learn by doing her website. 
 
