@@ -33,3 +33,4 @@ The heavy-lifting of the project was done on the high school lab sessions itself
 
 What I learned from it
 ======
+This was my first real experience as a teaching assistant in a lab environment, which gave me invaluable tools as to how to manage this specific environment and others similar. Also, it gave me great insight on how to communicate difficult scientific concepts in a way the public at hand (in this case, 17-year olds) could understand it.
