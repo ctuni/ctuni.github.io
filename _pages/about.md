@@ -22,7 +22,7 @@ All of the work mentioned above is carried out using Amazon Web Services, thus m
 
 Teaching, SciComm & Outreach
 ======
-I greatly enjoy communicating science in a useful manner, that is why I take every opportunity to take on teaching, mentoring and advisor roles for scientists more junior than me. I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.
+I greatly enjoy communicating science in a useful manner, that is why I take every opportunity to to teach, mentor, and advise other scientists more junior than me, or other individuals who might benefit from my knowledge. I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.
 
 I also have a deep interest in outreach initiatives aimed to bringing science closer to the general population, specially the younger generations.
 
