@@ -20,13 +20,13 @@ My other duties include developing bioinformatics analysis pipelines ready and e
 
 All of the work mentioned above is carried out using Amazon Web Services, thus my duties also include setting up and modifying the cloud infrastructure to cater to the analysis and pipeline's needs.
 
-SciComm & Outreach
+Teaching, SciComm & Outreach
 ======
-I also have a deep interest in scientific communication and outreach initiatives aimed to bringing science closer to the general population, specially the younger generation.
+I greatly enjoy communicating science in a useful manner, that is why I take every opportunity to take on teaching, mentoring and advisor roles for scientists more junior than me. I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.
 
-Because of this I have participated in several of those initiatives as a scientist, and I take the opportunity to do it again whenever it arises.
+I also have a deep interest in outreach initiatives aimed to bringing science closer to the general population, specially the younger generations.
 
-Also, I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.
+Because of this I have participated in several of those initiatives as a scientist, and I take the opportunity to do it again whenever it arises. 
 
 Miscellaneous
 ------
