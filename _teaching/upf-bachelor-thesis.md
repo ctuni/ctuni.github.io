@@ -20,4 +20,4 @@ Proofreading, suggesting, and general guidance in the writing and presentation o
 
 What I learned from it
 ======
-At first I felt a bit scared and inadequate, due to my ignorace of the scientific concepts in the thesis. But while reading it, I realized I could make suggestions that are broad and applicable in any field, specially aimed at making sure that what is being presented follows the standard of what we consider "good science".
+At first I felt a bit scared and inadequate, due to my ignorance of the scientific concepts in the thesis. But while reading it, I realized I could make suggestions that are broad and applicable in any field, specially aimed at making sure that what is being presented follows the standard of what we consider "good science".
