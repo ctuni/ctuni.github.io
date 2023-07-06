@@ -22,6 +22,8 @@ All of the work mentioned above is carried out using Amazon Web Services, thus m
 
 Since the work I carry out would be impossible with the tools designed by other bioinformatic scientists and computational biologists, I try to always give back to the community by collaborating in projects such as [nf-core](https://nf-co.re/), by fixing bugs, writing documentation, creating new modules and features, and generally helping to the extent I can.
 
+Finally, I decided to learn `COBOL` using free and paid online resources because it literally runs the world as we know it, at it sounds really interesting to know about it.
+
 Teaching, SciComm & Outreach
 ======
 I greatly enjoy communicating science in a useful manner, that is why I take every opportunity to to teach, mentor, and advise other scientists more junior than me, or other individuals who might benefit from my knowledge. I used to work as a programming & robotics instructor for children aged 8 to 17, which gave me the skills needed to communicate technical concepts in an understandable way, and also the passion to continue doing it while working as a bioinformatics scientist.

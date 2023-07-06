@@ -44,6 +44,7 @@ Skills
   * Nextflow: creation of DSL2 analysis pipelines, with special interest in reproducibility and user-friendliness.
   * Perl
   * Bash
+  * COBOL
 * Omic-data analysis, specially:
   * Transcriptomics
   * Metagenomics
