@@ -42,9 +42,8 @@ Skills
   * R: data analysis and appealing interactive visualizations with packages such as `DT`, `plotly`, and `htmldashboard`.
   * Phython: data analysis and visualization with packages such as `pandas` and `matplotlib`.
   * Nextflow: creation of DSL2 analysis pipelines, with special interest in reproducibility and user-friendliness.
-  * Perl
-  * Bash
-  * COBOL
+  * Perl, Bash, and COBOL scripting.
+  * HTML, CSS, and Javascript for web and markdown design.
 * Omic-data analysis, specially:
   * Transcriptomics
   * Metagenomics
