@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * **B.S. in Biotechnology**, Universitat Autonòma de Barcelona (UAB), 2019
-* **M.S. in Omics Data Analysis**, Universitat de Barcelona-Universitat de Vic (UB-UVIC-UCC), 2020
+* **M.S. in Bioinformatics & Omics Data Analysis**, Universitat de Barcelona-Universitat de Vic (UB-UVIC-UCC), 2020
 * **Ph.D in Biomedicine**, Universitat Pompeu Fabra (UPF), 2025 (expected)
 
 Relevant work experience
