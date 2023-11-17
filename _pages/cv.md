@@ -19,7 +19,7 @@ Relevant work experience
 ======
 * **February 2021-Present: Bioinformatics Scientist**
   * Flomics Biotech S.L.
-  * Duties include: Data analysis, pipeline development, bioinformatics platform management, training new pipeline developers.
+  * Duties include: Data analysis, pipeline development, use of machine learning algorithms, bioinformatics platform management, training new pipeline developers.
   * Carrying out my [Industrial Ph.D](https://doctoratsindustrials.gencat.cat/en/) project, with the title: "Early detection of colorectal cancer with an RNA-Seq-based liquid biopsy test".
 
 * **October 2019-February 2021: Manager and instructor**
@@ -39,14 +39,18 @@ Relevant work experience
 Skills
 ======
 * Knowledgeable in the following languages:
-  * R: data analysis and appealing interactive visualizations with packages such as `DT`, `plotly`, and `htmldashboard`.
-  * Phython: data analysis and visualization with packages such as `pandas` and `matplotlib`.
+  * R: data analysis, machine learning algorithms, and appealing interactive visualizations with packages such as `DT`, `plotly`, `ggplot` and `htmldashboard`.
+  * Phython: data analysis, machine learning algorithms, and visualization with packages such as `pandas` and `matplotlib`.
   * Nextflow: creation of DSL2 analysis pipelines, with special interest in reproducibility and user-friendliness.
   * Perl, Bash, and COBOL scripting.
   * HTML, CSS, and Javascript for web and markdown design.
 * Omic-data analysis, specially:
   * Transcriptomics
   * Metagenomics
+  * Genomics
+  * General and applied statistics to biological and life sciences.
+* Machine Learning:
+  * Knowledgeable in supervised and unsupervised machine learning algorithms applied to life sciences in general, and biomarker discovery in particular.
 * AWS
 * Docker, Singularity, Conda, Git, CLI, and other helper tools for Bioinformatics
 * Aside from hard skills, I consider myself someone eager to learn, solve problems, and overcome obstacles by finding creative and inventive solutions while being a team-player.
