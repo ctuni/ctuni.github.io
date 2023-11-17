@@ -76,5 +76,6 @@ Teaching & Mentoring
   
 Service and leadership
 ======
+* Member of the [Nexflow Ambassadors](https://www.nextflow.io/ambassadors.html) [team](https://www.nextflow.io/our_ambassadors.html).
 * Active member of `nf-core` and `Nextflow` projects and Slack spaces, contributing to `viralrecon`, `rnaseq`, `ampliseq`, and `differentialabundance` pipelines.
 * Safety officer for `nf-core` Hackathons and member of the nf-core's Outreach team since 2021. 
