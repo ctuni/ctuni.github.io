@@ -8,7 +8,7 @@ date: 2023-09-30
 location: "Barcelona, Spain"
 ---
 
-Mentor in the third round of nf-core's [mentorship program](https://nf-co.re/mentorships), aimed at matching mentors (senior advisor) with mentees (a person receiving training from the mentor).
+Mentor in the third round of nf-core’s [mentorship program](https://nf-co.re/mentorships), designed to pair experienced senior advisors with trainees seeking guidance.
 
 Description
 ======

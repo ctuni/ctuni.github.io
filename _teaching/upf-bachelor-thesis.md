@@ -1,5 +1,5 @@
 ---
-title: "Scientific Advisor for UPF's Bachelor's degree in Telecommunications Network Engineering final thesis"
+title: "Scientific Advisor for UPF’s Bachelor’s Thesis in Telecommunications Network Engineering"
 collection: teaching
 type: "Bachelor's thesis Scientific Advisor"
 permalink: /teaching/upf-bachelor-thesis
