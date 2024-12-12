@@ -58,6 +58,8 @@ yandex_site_verification :
 # Social Sharing
 twitter:
   username               : &twitter "@c_tunyi"
+bluesky:
+  username               : &bluesky "@ctuni.bsky.social"
 facebook:
   username               :
   app_id                 :
