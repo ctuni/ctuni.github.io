@@ -149,7 +149,7 @@ exclude:
   - package.json
   - tmp
   - vendor
-  - private/servei-tecnic.html
+  - _pages/servei-tecnic.html
 keep_files:
   - .git
   - .svn
