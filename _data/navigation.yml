@@ -8,8 +8,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Outreach"
-    url: /outreach/    
+  #- title: "Outreach"
+  #  url: /outreach/    
 
   - title: "Teaching & Mentoring"
     url: /teaching/    

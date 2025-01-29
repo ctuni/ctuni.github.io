@@ -15,27 +15,28 @@ description              : &description "Bioinformatics Scientist based in Barce
 url                      : https://ctuni.dev # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ctuni/ctuni.github.io"
+
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
-# author:
-#   # Biographic information
-#   avatar           : "profile.png"
-#   name             : "Your Sidebar Name"
-#   pronouns         : # example: "she/her"  
-#   bio              : "Short biography for the left-hand sidebar"
-#   location         : "Earth"
-#   employer         : "Red Brick University"
-#   uri              : # URL
-#   email            : "none@example.org" 
+author:
+  # Biographic information
+  avatar           : "Cropped_Image.png"
+  name             : "Cristina Tuñí i Domínguez"
+  pronouns         : # example: "she/her"  
+  bio              : "Bioinformatics Scientist based in Barcelona, working at Flomics Biotech and getting my PhD in Biomedicine at UPF. Interested in transcriptomics of cancer and metagenomics. Nextflowmancer."
+  location         : "Barcelona"
+  employer         : " Flomics Biotech S.L."
+  uri              : # URL
+  email            : "c.tuni.dominguez@gmail.com"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "http://orcid.org/0000-0001-5762-2108"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
 
@@ -43,12 +44,12 @@ repository               : "ctuni/ctuni.github.io"
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "ctuni"
   kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  stackoverflow    : "15369644/cris-tuñí"
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : "ctuni.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -116,7 +117,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -151,45 +152,6 @@ analytics:
   google:
     tracking_id          :
 
-
-# Site Author
-author:
-  name             : "Cristina Tuñí i Domínguez"
-  avatar           : "Cropped_Image.png"
-  bio              : "Bioinformatics Scientist based in Barcelona, working at Flomics Biotech and getting my PhD in Biomedicine at UPF. Interested in transcriptomics of cancer and metagenomics. Nextflowmancer."
-  location         : "Barcelona"
-  employer         : " Flomics Biotech S.L."
-  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : #"http://yourfullgooglescholarurl.com"
-  email            : "c.tuni.dominguez@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "ctuni"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/0000-0001-5762-2108"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : "15369644/cris-tuñí"
-  steam            :
-  tumblr           :
-  twitter          : "c_tunyi"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
-  bluesky          : "@ctuni.bsky.social"
 
 
 # Reading Files

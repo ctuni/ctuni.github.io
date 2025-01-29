@@ -3,12 +3,13 @@
    ========================================================================== */
 
 .masthead {
-  position: fixed;
-  background: white;
+  position: relative;
+  // position: fixed;
+  background: $darker-gray;
   border-bottom: 1px solid $border-color;
-  height: $masthead-height;
-  top: 0;
-  width: 100%;
+  // height: $masthead-height;
+  // top: 0;
+  // width: 100%;
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -43,6 +44,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+    background-color: $darker-gray;
   }
 }
 
@@ -50,6 +52,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  background-color: $darker-gray;
 
   &--lg {
     padding-right: 2em;
