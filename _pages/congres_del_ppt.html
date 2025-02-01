@@ -97,6 +97,30 @@ layout: none
       margin: 20px 0;
       font-style: italic;
     }
+
+    /* Estils per al comitè organitzador */
+    .committee-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .organizer {
+      flex: 1 1 45%;
+      background: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .organizer img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -111,6 +135,7 @@ layout: none
       <li><a href="#speakers">Ponents</a></li>
       <li><a href="#location">Localització</a></li>
       <li><a href="#fun">La Nostra Diversió</a></li>
+      <li><a href="#committee">Comitè Organitzador</a></li>
     </ul>
   </nav>
 
@@ -134,7 +159,7 @@ layout: none
       <p>Aquest any comptem amb experts autoproclamats en PowerPoints, entre els quals:</p>
       <ul>
         <li>Dr. Pau Costa – Expert en supervivència de mal de panxa</li>
-        <li>Prof. Carla Canadell – Mestressa en l'art la coquetterie</li>
+        <li>Prof. Carla Canadell – Mestressa en l'art de la coquetterie</li>
         <li>Drx. Cris Tuñí – Innovadori en l'ús de l'expressió de gènere per despistar al personal</li>
         <li>Catedràtic Víctor (com et dius de cognom?) – Veu líder en l'estudi de la interacció entre l'alcohol i l'exercici físic</li>
         <li>Joaquim Abós, MD – Expert en edat quàntica: tenir 60 anys i alhora 26 anys.</li>
@@ -155,8 +180,29 @@ layout: none
         <p><strong>Recorda!</strong> Tot això és una excusa per passar-ho bé: Prepara la teva millor presentació, deixa volar la teva creativitat i, sobretot, gaudeix del moment!</p>
       </div>
     </section>
-  </div>
 
+      <!-- Secció del Comitè Organitzador -->
+      <section id="committee" class="committee">
+        <h2 class="section-title">Comitè Organitzador</h2>
+        <div class="committee-container">
+          <!-- Organitzador 1 -->
+          <div class="organizer">
+            <img src="/images/headshot_c.png" alt="Foto de Organitzadora Corni">
+            <h3>Cornèlia Tuñí i Canadell</h3>
+            <p>Experta en mossegar quan menys t'ho esperes, a traició. Inspiradora d'idees originals, i productora d'una quantitat absolutament anormal de cera d'orella pudent.</p>
+          </div>
+          <!-- Organitzador 2 -->
+          <div class="organizer">
+            <img src="/images/headshot_t.png" alt="Foto de Organitzadora Tildi">
+            <h3>Tilda Canadell-Tuñí</h3>
+            <p>Especialista en roncar a la mínima mostra d'afecte. Pionera en la ciència de fuita anal i en tenir més calle que la Gran Via.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+<br>
+<br>
   <footer>
     <p>&copy; 2025 Congrés Científic del PowerPoint Derranjat. Tots els drets reservats.</p>
   </footer>
