@@ -42,6 +42,7 @@ Skills
   * R: data analysis, machine learning algorithms, and appealing interactive visualizations with packages such as `DT`, `plotly`, `ggplot` and `htmldashboard`.
   * Python: data analysis, machine learning algorithms, and visualization with packages such as `pandas` and `matplotlib`.
   * Nextflow: creation of DSL2 analysis pipelines, with special interest in reproducibility and user-friendliness.
+  * Julia
   * Perl, Bash, and COBOL scripting.
   * HTML, CSS, and Javascript for web and markdown design.
 * Omic-data analysis, specially:
