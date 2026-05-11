@@ -1,14 +1,14 @@
 ---
-title: "Scientific Advisor for UPF’s Bachelor’s Thesis in Telecommunications Network Engineering"
+title: "Scientific Advisor for Bachelor’s Theses (UPF & UB)"
 collection: teaching
-type: "Bachelor's thesis Scientific Advisor"
+type: "Bachelor’s thesis Scientific Advisor"
 permalink: /teaching/upf-bachelor-thesis
-venue: "Universitat Pompeu Fabra"
+venue: "Universitat Pompeu Fabra / Universitat de Barcelona"
 date: 2023-06-01
 location: "Barcelona, Spain"
 ---
 
-Scientific Advisor for the final bachelor's degree thesis entitled: "InfiniBand: Anàlisis i Monitoratge", carried out by a UPF student the year 2023.
+Scientific Advisor for bachelor’s degree theses at UPF (Telecommunications Network Engineering) and UB (Medicine).
 
 Description
 ======
