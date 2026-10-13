@@ -539,21 +539,36 @@ sitemap: false
     tick();
 
     /* ---------- Música de fons: Fief - II (2016) ---------- */
-    // Els navegadors no deixen sonar música sense que l'usuari toqui alguna cosa,
-    // així que cal prémer el botó per començar.
+    // Intentem reproduir-la només obrir la pàgina. La majoria de navegadors (sobretot
+    // als mòbils) bloquegen el so fins que l'usuari interactua, així que si l'autoplay
+    // falla, la música arrenca amb el primer toc a qualsevol lloc de la pàgina.
     const YT_VIDEO = "DffQVP6UqVQ";
     const musicBtn = document.getElementById("music");
     const musicLabel = document.getElementById("music-label");
+    const UNLOCK_EVENTS = ["pointerup", "touchend", "keydown"];
     let player;
+    let userPaused = false;
+
+    function unlock(e) {
+      if (musicBtn.contains(e.target)) return; // el botó ja ho gestiona
+      if (player && !userPaused) player.playVideo();
+    }
+    const stopUnlocking = () => UNLOCK_EVENTS.forEach(ev => document.removeEventListener(ev, unlock, true));
+    UNLOCK_EVENTS.forEach(ev => document.addEventListener(ev, unlock, true));
 
     window.onYouTubeIframeAPIReady = () => {
       player = new YT.Player("yt-player", {
         videoId: YT_VIDEO,
-        playerVars: { playsinline: 1, loop: 1, playlist: YT_VIDEO, controls: 0, disablekb: 1 },
+        playerVars: { autoplay: 1, playsinline: 1, loop: 1, playlist: YT_VIDEO, controls: 0, disablekb: 1 },
         events: {
-          onReady: () => { player.setVolume(60); musicBtn.disabled = false; },
+          onReady: () => {
+            player.setVolume(60);
+            musicBtn.disabled = false;
+            player.playVideo();
+          },
           onStateChange: e => {
             const playing = e.data === YT.PlayerState.PLAYING;
+            if (playing) stopUnlocking();
             musicBtn.setAttribute("aria-pressed", playing);
             musicLabel.textContent = playing ? "Fief – II" : "Música";
           }
@@ -563,8 +578,14 @@ sitemap: false
 
     musicBtn.addEventListener("click", () => {
       if (!player) return;
-      if (player.getPlayerState() === YT.PlayerState.PLAYING) player.pauseVideo();
-      else player.playVideo();
+      stopUnlocking();
+      if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+        userPaused = true;
+        player.pauseVideo();
+      } else {
+        userPaused = false;
+        player.playVideo();
+      }
     });
 
     const ytScript = document.createElement("script");
