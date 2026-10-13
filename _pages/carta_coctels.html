@@ -1,0 +1,476 @@
+---
+permalink: /carta_coctels/
+layout: none
+sitemap: false
+---
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a100c">
+  <title>Rave Shrek · Còctels</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧅</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a100c;
+      --bg-card: #121a15;
+      --line: #263a2c;
+      --accent: #a4e63c;
+      --accent-soft: #d8f7a4;
+      --rave: #ff4fd8;
+      --text: #ecebf3;
+      --muted: #98a89c;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; overflow-x: hidden; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 50% -10%, rgba(164, 230, 60, 0.18), transparent 60%),
+        radial-gradient(circle at 10% 40%, rgba(255, 60, 200, 0.10), transparent 40%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Bombolles de cava */
+    .bubbles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .bubbles span {
+      position: absolute;
+      bottom: -20px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 245, 140, 0.35);
+      animation: rise linear infinite;
+    }
+    @keyframes rise {
+      to { transform: translateY(-110vh) translateX(var(--drift)); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .bubbles { display: none; } }
+
+    .wrap { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 0 16px; }
+
+    /* Capçalera */
+    header { text-align: center; padding: 48px 0 28px; }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(2.6rem, 11vw, 4rem);
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(180deg, var(--accent-soft), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 18px rgba(164, 230, 60, 0.35));
+    }
+
+    .subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--rave);
+      margin: 6px 0 0;
+      text-shadow: 0 0 14px rgba(255, 79, 216, 0.55);
+    }
+
+    .menu-label {
+      margin: 16px 0 0;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--accent);
+      margin: 18px auto 0;
+      max-width: 260px;
+    }
+    .ornament::before, .ornament::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent));
+    }
+    .ornament::after { background: linear-gradient(270deg, transparent, var(--accent)); }
+
+    .countdown {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .countdown strong { color: var(--accent-soft); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+    /* Pestanyes */
+    .tabs-bar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding: 12px 0;
+    }
+
+    .tabs {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px;
+      background: rgba(18, 26, 21, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .tabs .pill {
+      position: absolute;
+      top: 4px; bottom: 4px; left: 4px;
+      width: calc(50% - 4px);
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent-soft), var(--accent));
+      transition: transform 0.35s cubic-bezier(.65, 0, .35, 1);
+    }
+    .tabs[data-active="1"] .pill { transform: translateX(100%); }
+
+    .tabs button {
+      position: relative;
+      z-index: 1;
+      appearance: none;
+      border: 0;
+      background: none;
+      font: 500 0.95rem var(--sans);
+      color: var(--muted);
+      padding: 11px 8px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .tabs button[aria-selected="true"] { color: var(--bg); }
+    .tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Llista de còctels */
+    .panel { padding: 8px 0 24px; }
+    .panel[hidden] { display: none; }
+    .panel.enter { animation: fadeUp 0.4s ease both; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } }
+
+    .intro {
+      text-align: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin: 4px 0 20px;
+    }
+
+    .drink {
+      position: relative;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      padding: 20px 18px;
+      margin-bottom: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .drink.featured { border-color: rgba(164, 230, 60, 0.55); box-shadow: 0 0 0 1px rgba(164, 230, 60, 0.15), 0 10px 30px -12px rgba(164, 230, 60, 0.35); }
+    .badge {
+      position: absolute;
+      top: -10px; right: 16px;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #fff;
+      background: var(--rave);
+      box-shadow: 0 0 12px rgba(255, 79, 216, 0.6);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .glass {
+      width: 56px; height: 56px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: radial-gradient(circle at 30% 30%, rgba(164, 230, 60, 0.15), transparent 70%);
+      color: var(--accent);
+    }
+    .glass svg { width: 28px; height: 28px; }
+
+    .drink h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      margin: 0 0 4px;
+      color: var(--text);
+    }
+
+    .desc { margin: 0 0 10px; color: var(--muted); font-size: 0.95rem; }
+
+    .ingredients {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--accent-soft);
+      letter-spacing: 0.02em;
+    }
+    .ingredients li { display: inline; }
+    .ingredients li + li::before { content: " · "; color: var(--accent); }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 8px;
+      margin-top: 12px;
+    }
+    .tag {
+      font-size: 0.72rem;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+    .strength {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .strength i {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+    }
+    .strength i.on { background: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 12px 0 calc(40px + env(safe-area-inset-bottom));
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    footer .ornament { margin-bottom: 14px; }
+  </style>
+</head>
+<body>
+  <div class="bubbles" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Cap d'Any · 2026 → 2027</p>
+      <h1>Rave Shrek</h1>
+      <p class="subtitle">de Cap d'Any</p>
+      <div class="ornament" aria-hidden="true">✦</div>
+      <p class="menu-label">Carta de còctels</p>
+      <p class="countdown" id="countdown" aria-live="off"></p>
+    </header>
+
+    <div class="tabs-bar">
+      <div class="tabs" role="tablist" aria-label="Tipus de còctel" data-active="0">
+        <span class="pill" aria-hidden="true"></span>
+        <button role="tab" id="tab-alcohol" aria-controls="panel-alcohol" aria-selected="true">🍸 Amb alcohol</button>
+        <button role="tab" id="tab-sense" aria-controls="panel-sense" aria-selected="false" tabindex="-1">🍹 Sense alcohol</button>
+      </div>
+    </div>
+
+    <main>
+      <section class="panel" id="panel-alcohol" role="tabpanel" aria-labelledby="tab-alcohol">
+        <p class="intro">Per brindar com cal</p>
+        <div class="list"></div>
+      </section>
+      <section class="panel" id="panel-sense" role="tabpanel" aria-labelledby="tab-sense" hidden>
+        <p class="intro">Tota la festa, zero graus</p>
+        <div class="list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ornament" aria-hidden="true">✦</div>
+      Els ogres són com les cebes: tenen capes. Els còctels, també. 🧅<br>Demana a la barra (Víctor i Cris estaran encantadis de ser la barra)
+    </footer>
+  </div>
+
+  <script>
+    /* ==========================================================
+       CARTA — edita aquí els còctels.
+       glass:    "copa" | "martini" | "flauta" | "baix" | "alt"
+       strength: 1 (suau) – 3 (fort); només per als que porten alcohol
+       featured: true per destacar-lo com a "Especial de la casa"
+       ========================================================== */
+    const CARTA = {
+      alcohol: [
+        {
+          name: "Long Island Ice Tea d'en Víctor",
+          desc: "La recepta clàssica, servida per en Víctor. Sembla un te gelat, però no ho és gens.",
+          ingredients: ["Vodka", "Rom blanc", "Ginebra", "Tequila", "Triple sec", "Llimona", "Cola"],
+          glass: "alt", strength: 3, tags: ["Cítric", "Perillós"], featured: true
+        },
+        {
+          name: "Negró",
+          desc: "Un Negroni amb ratafia en lloc de vermut. Amarg i herbaci, per beure a poc a poc.",
+          ingredients: ["Ginebra", "Campari", "Ratafia", "Pell de taronja"],
+          glass: "baix", strength: 3, tags: ["Amarg", "Herbaci"]
+        }
+      ],
+      sense: [
+        {
+          name: "Spritz del Gat amb Botes",
+          desc: "Com un spritz de veritat, però sense alcohol: amarg, taronja i bombolles.",
+          ingredients: ["Bitter Kas", "Ginger ale", "Suc de taronja", "Rodanxa de taronja", "Gel"],
+          glass: "copa", tags: ["Amarg", "Bombolles"], featured: true
+        },
+        {
+          name: "Aigua del Pantà",
+          desc: "Verd com el pantà d'en Shrek i molt més bo. Fresc, amb un punt picant de gingebre.",
+          ingredients: ["Ginger ale", "Llima", "Menta", "Cogombre", "Gel picat"],
+          glass: "alt", tags: ["Refrescant", "Herbaci"]
+        }
+      ]
+    };
+
+    /* ---------- Icones de copa ---------- */
+    const GLASS = {
+      copa:    '<path d="M7 3h10c0 5-2 9-5 9s-5-4-5-9Zm5 9v8m-4 0h8"/>',
+      martini: '<path d="M4 4h16l-8 9-8-9Zm8 9v7m-4 0h8M6.5 7h11"/>',
+      flauta:  '<path d="M9.5 2h5l-.6 10a1.9 1.9 0 0 1-3.8 0L9.5 2Zm2.5 12v7m-3 0h6M10 6h4"/>',
+      baix:    '<path d="M5 7h14l-1.5 13h-11L5 7Zm1 5h12"/>',
+      alt:     '<path d="M7 3h10l-1 18H8L7 3Zm.4 6h9.2M14 3l3-2"/>'
+    };
+
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    function card(d, withAlcohol) {
+      const strength = withAlcohol && d.strength
+        ? `<span class="strength" aria-label="Intensitat ${d.strength} de 3">${[1, 2, 3].map(n => `<i class="${n <= d.strength ? "on" : ""}"></i>`).join("")}</span>`
+        : "";
+      return `
+        <article class="drink${d.featured ? " featured" : ""}">
+          ${d.featured ? '<span class="badge">Especial de la casa</span>' : ""}
+          <div class="glass" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${GLASS[d.glass] || GLASS.copa}</svg>
+          </div>
+          <div>
+            <h2>${esc(d.name)}</h2>
+            <p class="desc">${esc(d.desc)}</p>
+            <ul class="ingredients">${d.ingredients.map(i => `<li>${esc(i)}</li>`).join("")}</ul>
+            <div class="meta">
+              ${(d.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
+              ${strength}
+            </div>
+          </div>
+        </article>`;
+    }
+
+    document.querySelector("#panel-alcohol .list").innerHTML = CARTA.alcohol.map(d => card(d, true)).join("");
+    document.querySelector("#panel-sense .list").innerHTML = CARTA.sense.map(d => card(d, false)).join("");
+
+    /* ---------- Pestanyes ---------- */
+    const tablist = document.querySelector(".tabs");
+    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+    const HASHES = ["#amb-alcohol", "#sense-alcohol"];
+
+    function select(i, { focus = false, updateHash = true } = {}) {
+      tablist.dataset.active = i;
+      tabs.forEach((t, j) => {
+        const on = i === j;
+        t.setAttribute("aria-selected", on);
+        t.tabIndex = on ? 0 : -1;
+        const panel = document.getElementById(t.getAttribute("aria-controls"));
+        panel.hidden = !on;
+        if (on) { panel.classList.remove("enter"); void panel.offsetWidth; panel.classList.add("enter"); }
+      });
+      if (focus) tabs[i].focus();
+      if (updateHash) history.replaceState(null, "", HASHES[i]);
+    }
+
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => select(i));
+      t.addEventListener("keydown", e => {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          select((i + 1) % tabs.length, { focus: true });
+        }
+      });
+    });
+
+    // Permet enllaçar directament a una pestanya: /carta_coctels/#sense-alcohol
+    const initial = HASHES.indexOf(location.hash);
+    select(initial === -1 ? 0 : initial, { updateHash: false });
+
+    /* ---------- Compte enrere fins a les campanades ---------- */
+    const MIDNIGHT = new Date(2027, 0, 1, 0, 0, 0); // hora local del dispositiu
+    const countdownEl = document.getElementById("countdown");
+
+    function tick() {
+      const ms = MIDNIGHT - Date.now();
+      if (ms <= 0) {
+        countdownEl.innerHTML = "<strong>Bon any 2027! 🎆</strong>";
+        return;
+      }
+      const s = Math.floor(ms / 1000);
+      const d = Math.floor(s / 86400);
+      const h = Math.floor(s / 3600) % 24;
+      const m = Math.floor(s / 60) % 60;
+      const sec = s % 60;
+      const pad = n => String(n).padStart(2, "0");
+      countdownEl.innerHTML = d > 0
+        ? `Falten <strong>${d} dies</strong> per a les campanades`
+        : `Campanades en <strong>${pad(h)}:${pad(m)}:${pad(sec)}</strong>`;
+      setTimeout(tick, 1000);
+    }
+    tick();
+
+    /* ---------- Bombolles ---------- */
+    const bubbles = document.querySelector(".bubbles");
+    for (let i = 0; i < 18; i++) {
+      const b = document.createElement("span");
+      const size = 4 + Math.random() * 10;
+      Object.assign(b.style, {
+        left: Math.random() * 100 + "%",
+        width: size + "px",
+        height: size + "px",
+        animationDuration: 10 + Math.random() * 14 + "s",
+        animationDelay: -Math.random() * 20 + "s"
+      });
+      b.style.setProperty("--drift", (Math.random() * 60 - 30) + "px");
+      bubbles.appendChild(b);
+    }
+  </script>
+</body>
+</html>
