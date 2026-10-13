@@ -32,6 +32,8 @@ sitemap: false
 
     * { box-sizing: border-box; }
 
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
     html, body { margin: 0; overflow-x: hidden; }
 
     body {
@@ -368,6 +370,96 @@ sitemap: false
     @keyframes eq { 0%, 100% { height: 4px; } 50% { height: 14px; } }
     @media (prefers-reduced-motion: reduce) { .music, .music .eq i { animation: none !important; } }
 
+    /* Ruleta: I need a hero */
+    .hero {
+      margin: 8px 0 32px;
+      padding: 24px 18px;
+      text-align: center;
+      border: 1px dashed rgba(255, 79, 216, 0.5);
+      border-radius: 18px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 79, 216, 0.10), transparent 70%), var(--bg-card);
+    }
+    .hero-title {
+      margin: 0 0 4px;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+    .hero-sub { margin: 0 0 16px; color: var(--muted); font-size: 0.9rem; }
+
+    .choice {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 0 0 18px;
+      padding: 0;
+      border: 0;
+    }
+    .choice label { cursor: pointer; }
+    .choice input { position: absolute; opacity: 0; pointer-events: none; }
+    .choice span {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .choice input:checked + span { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 500; }
+    .choice input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .hero-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 28px;
+      font: 700 1.05rem var(--sans);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(180deg, #ff7ae3, var(--rave));
+      box-shadow: 0 0 24px -4px rgba(255, 79, 216, 0.8);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .hero-btn:active { transform: scale(0.96); }
+    .hero-btn:disabled { opacity: 0.7; cursor: default; }
+    .hero-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .hero-result { min-height: 3.2em; margin-top: 18px; }
+    .hero-name {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.7rem;
+      line-height: 1.15;
+      color: var(--accent);
+      text-shadow: 0 0 16px rgba(164, 230, 60, 0.45);
+    }
+    .hero-result.spinning .hero-name { color: var(--muted); text-shadow: none; }
+    .hero-result.won .hero-name { animation: pop 0.4s ease-out; }
+    @keyframes pop { 0% { transform: scale(0.7); } 70% { transform: scale(1.12); } }
+
+    .hero-go {
+      appearance: none;
+      margin-top: 8px;
+      border: 0;
+      background: none;
+      color: var(--accent-soft);
+      font: 500 0.9rem var(--sans);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .drink.flash { animation: flash 1.6s ease-out; }
+    @keyframes flash {
+      0%, 40% { border-color: var(--rave); box-shadow: 0 0 0 2px var(--rave), 0 0 36px -4px rgba(255, 79, 216, 0.9); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-result.won .hero-name, .drink.flash { animation: none; } }
+
     footer {
       text-align: center;
       padding: 12px 0 calc(90px + env(safe-area-inset-bottom));
@@ -406,6 +498,24 @@ sitemap: false
         <div class="list"></div>
       </section>
     </main>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 class="hero-title" id="hero-title">No saps què demanar?</h2>
+      <p class="hero-sub">Deixa que el destí triï per tu.</p>
+      <fieldset class="choice">
+        <legend class="sr-only">D'on vols que surti el còctel</legend>
+        <label><input type="radio" name="pool" value="alcohol"><span>🍸 Amb alcohol</span></label>
+        <label><input type="radio" name="pool" value="sense"><span>🍹 Sense alcohol</span></label>
+        <label><input type="radio" name="pool" value="totes" checked><span>🎲 Tots</span></label>
+      </fieldset>
+      <div>
+        <button class="hero-btn" id="hero-btn" type="button">I need a hero</button>
+      </div>
+      <div class="hero-result" id="hero-result" aria-live="polite">
+        <span class="hero-name" id="hero-name"></span>
+        <button class="hero-go" id="hero-go" type="button" hidden>Veure'l a la carta →</button>
+      </div>
+    </section>
 
     <footer>
       <div class="ornament" aria-hidden="true">✦</div>
@@ -523,12 +633,12 @@ sitemap: false
 
     const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-    function card(d, withAlcohol) {
+    function card(d, withAlcohol, id) {
       const strength = withAlcohol && d.strength
         ? `<span class="strength" aria-label="Intensitat ${d.strength} de 3">${[1, 2, 3].map(n => `<i class="${n <= d.strength ? "on" : ""}"></i>`).join("")}</span>`
         : "";
       return `
-        <article class="drink${d.featured ? " featured" : ""}">
+        <article class="drink${d.featured ? " featured" : ""}" id="${id}">
           ${d.featured ? '<span class="badge">Especial de la casa</span>' : ""}
           <div class="glass" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${GLASS[d.glass] || GLASS.copa}</svg>
@@ -545,8 +655,8 @@ sitemap: false
         </article>`;
     }
 
-    document.querySelector("#panel-alcohol .list").innerHTML = CARTA.alcohol.map(d => card(d, true)).join("");
-    document.querySelector("#panel-sense .list").innerHTML = CARTA.sense.map(d => card(d, false)).join("");
+    document.querySelector("#panel-alcohol .list").innerHTML = CARTA.alcohol.map((d, i) => card(d, true, `alcohol-${i}`)).join("");
+    document.querySelector("#panel-sense .list").innerHTML = CARTA.sense.map((d, i) => card(d, false, `sense-${i}`)).join("");
 
     /* ---------- Pestanyes ---------- */
     const tablist = document.querySelector(".tabs");
@@ -580,6 +690,65 @@ sitemap: false
     // Permet enllaçar directament a una pestanya: /carta_coctels/#sense-alcohol
     const initial = HASHES.indexOf(location.hash);
     select(initial === -1 ? 0 : initial, { updateHash: false });
+
+    /* ---------- Ruleta: I need a hero ---------- */
+    const heroBtn = document.getElementById("hero-btn");
+    const heroResult = document.getElementById("hero-result");
+    const heroName = document.getElementById("hero-name");
+    const heroGo = document.getElementById("hero-go");
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let lastPick = null;
+
+    function pool() {
+      const which = document.querySelector('input[name="pool"]:checked').value;
+      const all = [
+        ...CARTA.alcohol.map((d, i) => ({ name: d.name, kind: "alcohol", id: `alcohol-${i}` })),
+        ...CARTA.sense.map((d, i) => ({ name: d.name, kind: "sense", id: `sense-${i}` }))
+      ];
+      return which === "totes" ? all : all.filter(d => d.kind === which);
+    }
+
+    heroBtn.addEventListener("click", () => {
+      const options = pool();
+      let candidates = options.filter(d => !lastPick || d.id !== lastPick.id);
+      if (!candidates.length) candidates = options;
+      const pick = candidates[Math.floor(Math.random() * candidates.length)];
+
+      heroBtn.disabled = true;
+      heroGo.hidden = true;
+      heroResult.classList.remove("won");
+      heroResult.classList.add("spinning");
+
+      const finish = () => {
+        heroName.textContent = pick.name;
+        heroResult.classList.remove("spinning");
+        void heroResult.offsetWidth;
+        heroResult.classList.add("won");
+        heroGo.hidden = false;
+        heroBtn.disabled = false;
+        lastPick = pick;
+      };
+      if (reducedMotion) return finish();
+
+      // Va passant noms cada cop més a poc a poc fins que s'atura
+      let delay = 45, i = Math.floor(Math.random() * options.length);
+      (function spin() {
+        heroName.textContent = options[i++ % options.length].name;
+        delay *= 1.13;
+        if (delay > 420) return setTimeout(finish, delay);
+        setTimeout(spin, delay);
+      })();
+    });
+
+    heroGo.addEventListener("click", () => {
+      if (!lastPick) return;
+      select(lastPick.kind === "alcohol" ? 0 : 1);
+      const el = document.getElementById(lastPick.id);
+      el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "center" });
+      el.classList.remove("flash");
+      void el.offsetWidth;
+      el.classList.add("flash");
+    });
 
     /* ---------- Compte enrere fins a les campanades ---------- */
     const MIDNIGHT = new Date(2027, 0, 1, 0, 0, 0); // hora local del dispositiu
