@@ -177,19 +177,11 @@ sitemap: false
     .tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
     /* Llista de còctels */
-    .panel { padding: 8px 0 24px; }
+    .panel { padding: 20px 0 24px; }
     .panel[hidden] { display: none; }
     .panel.enter { animation: fadeUp 0.4s ease both; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } }
 
-    .intro {
-      text-align: center;
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin: 4px 0 20px;
-    }
 
     .drink {
       position: relative;
@@ -306,6 +298,64 @@ sitemap: false
     .music[aria-pressed="true"] { animation: none; border-color: rgba(255, 79, 216, 0.6); box-shadow: 0 0 18px -4px rgba(255, 79, 216, 0.6); }
     .music:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .music:disabled { opacity: 0.5; cursor: default; animation: none; }
+
+    /* Easter egg: la ceba */
+    .onion {
+      appearance: none;
+      border: 0;
+      background: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .swamp {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 16px;
+      background: rgba(10, 16, 12, 0.94);
+      animation: swampIn 0.25s ease-out both;
+    }
+    .swamp[hidden] { display: none; }
+    @keyframes swampIn { from { opacity: 0; transform: scale(1.08); } }
+
+    .swamp h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(2rem, 10vw, 3.4rem);
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-shadow: 0 0 24px rgba(164, 230, 60, 0.6), 0 0 4px rgba(255, 79, 216, 0.8);
+      animation: shake 0.12s linear infinite;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0) rotate(0); }
+      25% { transform: translate(-3px, 2px) rotate(-1deg); }
+      75% { transform: translate(3px, -2px) rotate(1deg); }
+    }
+
+    .swamp-video {
+      width: min(100%, 560px);
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 40px -6px rgba(164, 230, 60, 0.7);
+      background: #000;
+    }
+    .swamp-video iframe, .swamp-video > div { width: 100%; height: 100%; border: 0; display: block; }
+
+    .swamp p { margin: 0; color: var(--muted); font-size: 0.85rem; }
+    @media (prefers-reduced-motion: reduce) { .swamp, .swamp h2 { animation: none; } }
     @keyframes glow { 50% { box-shadow: 0 0 26px -2px rgba(164, 230, 60, 0.75); } }
 
     .note { font-size: 1.05rem; line-height: 1; }
@@ -350,18 +400,16 @@ sitemap: false
 
     <main>
       <section class="panel" id="panel-alcohol" role="tabpanel" aria-labelledby="tab-alcohol">
-        <p class="intro">Per brindar com cal</p>
         <div class="list"></div>
       </section>
       <section class="panel" id="panel-sense" role="tabpanel" aria-labelledby="tab-sense" hidden>
-        <p class="intro">Tota la festa, zero graus</p>
         <div class="list"></div>
       </section>
     </main>
 
     <footer>
       <div class="ornament" aria-hidden="true">✦</div>
-      Els ogres són com les cebes: tenen capes. Els còctels, també. 🧅<br>Demana a la barra (Víctor i Cris estaran encantadis de ser la barra)
+      Els ogres són com les cebes: tenen capes. Els còctels, també. <button class="onion" id="onion" type="button" aria-label="Ceba">🧅</button><br>Demana a la barra (Víctor i Cris estaran encantadis de ser la barra)
     </footer>
   </div>
 
@@ -371,6 +419,12 @@ sitemap: false
     <span id="music-label">Música</span>
   </button>
   <div class="yt" aria-hidden="true"><div id="yt-player"></div></div>
+
+  <div class="swamp" id="swamp" role="dialog" aria-modal="true" aria-label="Get out of my swamp!" hidden>
+    <h2>Get out of<br>my swamp!</h2>
+    <div class="swamp-video"><div id="swamp-player"></div></div>
+    <p>Toca per tancar</p>
+  </div>
 
   <script>
     /* ==========================================================
@@ -426,21 +480,21 @@ sitemap: false
           glass: "alt", tags: ["Refrescant", "Herbaci"]
         },
         {
-          name: "Poció de la Fada Padrina",
+          name: "Poció de la Fada Madrina",
           desc: "Rosa, amb bombolles i sospitosament màgica. No et convertirà en princesa (o potser sí).",
-          ingredients: ["Xarop de nabius Monin", "Llima", "Gerds", "Menta", "Aigua amb gas"],
+          ingredients: ["Xarop de nabius", "Llima", "Gerds", "Menta", "Aigua amb gas"],
           glass: "copa", tags: ["Afruitat", "Bombolles"]
         },
         {
           name: "La Dragona Culona",
           desc: "Dolç com un primer amor i picant com l'alè d'una dragona. Tropical i amb foc.",
-          ingredients: ["Xarop de mango picant Monin", "Suc de taronja", "Llima", "Aigua amb gas", "Vora de sal i xili"],
+          ingredients: ["Xarop de mango picant", "Suc de taronja", "Llima", "Aigua amb gas", "Vora de tajín"],
           glass: "baix", tags: ["Picant", "Tropical"]
         },
         {
           name: "Ginger Glow",
-          desc: "Un Moscow Mule sense alcohol i ple de gingebre. Al Galetó de gingebre no li fa cap gràcia. Porta pomelo.",
-          ingredients: ["Tanqueray 0.0", "Licor de pomelo rosa Giffard 00", "Llima", "Xarop de sucre", "Ginger beer Fever-Tree"],
+          desc: "Un Moscow Mule sense alcohol i ple de gingebre. A la Galeta de gingebre no li fa cap gràcia.",
+          ingredients: ["Tanqueray 0.0", "Licor de pomelo rosa 00", "Llima", "Xarop de sucre", "Ginger beer Fever-Tree"],
           glass: "alt", tags: ["Picant", "Cítric"]
         }
       ]
@@ -550,7 +604,8 @@ sitemap: false
     let userPaused = false;
 
     function unlock(e) {
-      if (musicBtn.contains(e.target)) return; // el botó ja ho gestiona
+      // el botó ja ho gestiona, i la ceba obre l'easter egg
+      if (e.target.closest("#music, #onion, #swamp")) return;
       if (player && !userPaused) player.playVideo();
     }
     const stopUnlocking = () => UNLOCK_EVENTS.forEach(ev => document.removeEventListener(ev, unlock, true));
@@ -587,6 +642,44 @@ sitemap: false
         player.playVideo();
       }
     });
+
+    /* ---------- Easter egg: GET OUT OF MY SWAMP ---------- */
+    const SWAMP_VIDEO = "KavTrZIB12Y";
+    const swamp = document.getElementById("swamp");
+    let swampPlayer;
+    let musicWasPlaying = false;
+
+    function openSwamp() {
+      musicWasPlaying = !!player && player.getPlayerState && player.getPlayerState() === YT.PlayerState.PLAYING;
+      if (musicWasPlaying) player.pauseVideo();
+      swamp.hidden = false;
+      if (window.YT && YT.Player) {
+        swampPlayer = new YT.Player("swamp-player", {
+          videoId: SWAMP_VIDEO,
+          playerVars: { autoplay: 1, playsinline: 1, controls: 0, rel: 0, disablekb: 1 },
+          events: {
+            onReady: e => { e.target.setVolume(100); e.target.playVideo(); },
+            onStateChange: e => { if (e.data === YT.PlayerState.ENDED) closeSwamp(); }
+          }
+        });
+      } else {
+        document.getElementById("swamp-player").innerHTML =
+          `<iframe src="https://www.youtube.com/embed/${SWAMP_VIDEO}?autoplay=1&playsinline=1&controls=0&rel=0" allow="autoplay; encrypted-media"></iframe>`;
+      }
+    }
+
+    function closeSwamp() {
+      if (swamp.hidden) return;
+      swamp.hidden = true;
+      if (swampPlayer) { swampPlayer.destroy(); swampPlayer = null; }
+      // destroy() substitueix el contenidor, així que el tornem a crear
+      swamp.querySelector(".swamp-video").innerHTML = '<div id="swamp-player"></div>';
+      if (musicWasPlaying) player.playVideo();
+    }
+
+    document.getElementById("onion").addEventListener("click", openSwamp);
+    swamp.addEventListener("click", closeSwamp);
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeSwamp(); });
 
     const ytScript = document.createElement("script");
     ytScript.src = "https://www.youtube.com/iframe_api";
