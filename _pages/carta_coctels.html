@@ -279,9 +279,48 @@ sitemap: false
     }
     .strength i.on { background: var(--accent); }
 
+    /* Música */
+    .yt { position: fixed; left: -9999px; top: 0; width: 200px; height: 200px; opacity: 0; pointer-events: none; }
+
+    .music {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      appearance: none;
+      border: 1px solid rgba(164, 230, 60, 0.5);
+      border-radius: 999px;
+      padding: 10px 16px 10px 14px;
+      background: rgba(18, 26, 21, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--accent-soft);
+      font: 500 0.85rem var(--sans);
+      cursor: pointer;
+      box-shadow: 0 0 18px -4px rgba(164, 230, 60, 0.5);
+      animation: glow 2.4s ease-in-out infinite;
+    }
+    .music[aria-pressed="true"] { animation: none; border-color: rgba(255, 79, 216, 0.6); box-shadow: 0 0 18px -4px rgba(255, 79, 216, 0.6); }
+    .music:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .music:disabled { opacity: 0.5; cursor: default; animation: none; }
+    @keyframes glow { 50% { box-shadow: 0 0 26px -2px rgba(164, 230, 60, 0.75); } }
+
+    .note { font-size: 1.05rem; line-height: 1; }
+    .music[aria-pressed="true"] .note, .music:not([aria-pressed="true"]) .eq { display: none; }
+    .eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+    .eq i { width: 3px; height: 4px; border-radius: 1px; background: currentColor; }
+    .music[aria-pressed="true"] .eq i { animation: eq 0.9s ease-in-out infinite; }
+    .music[aria-pressed="true"] .eq i:nth-child(2) { animation-delay: -0.3s; }
+    .music[aria-pressed="true"] .eq i:nth-child(3) { animation-delay: -0.6s; }
+    @keyframes eq { 0%, 100% { height: 4px; } 50% { height: 14px; } }
+    @media (prefers-reduced-motion: reduce) { .music, .music .eq i { animation: none !important; } }
+
     footer {
       text-align: center;
-      padding: 12px 0 calc(40px + env(safe-area-inset-bottom));
+      padding: 12px 0 calc(90px + env(safe-area-inset-bottom));
       color: var(--muted);
       font-size: 0.8rem;
     }
@@ -326,6 +365,13 @@ sitemap: false
     </footer>
   </div>
 
+  <button class="music" id="music" type="button" aria-pressed="false" disabled>
+    <span class="note" aria-hidden="true">♪</span>
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="music-label">Música</span>
+  </button>
+  <div class="yt" aria-hidden="true"><div id="yt-player"></div></div>
+
   <script>
     /* ==========================================================
        CARTA — edita aquí els còctels.
@@ -346,6 +392,24 @@ sitemap: false
           desc: "Un Negroni amb ratafia en lloc de vermut. Amarg i herbaci, per beure a poc a poc.",
           ingredients: ["Ginebra", "Campari", "Ratafia", "Pell de taronja"],
           glass: "baix", strength: 3, tags: ["Amarg", "Herbaci"]
+        },
+        {
+          name: "Bloody Carly",
+          desc: "Un Bloody Mary amb ginebra en lloc de vodka. Salat, picant i ideal per recuperar forces.",
+          ingredients: ["Ginebra", "Suc de tomàquet", "Llimona", "Salsa Worcestershire", "Tabasco", "Sal d'api", "Pebre negre"],
+          glass: "alt", strength: 2, tags: ["Salat", "Picant"]
+        },
+        {
+          name: "Gin Garden",
+          desc: "Ginebra, flor de saüc i cogombre esclafat. Com un jardí en una copa.",
+          ingredients: ["Ginebra", "Licor de flor de saüc", "Suc de poma", "Cogombre"],
+          glass: "martini", strength: 2, tags: ["Floral", "Refrescant"]
+        },
+        {
+          name: "Oaxaca Mule",
+          desc: "La versió mexicana del Moscow Mule: mezcal fumat amb el picant del gingebre.",
+          ingredients: ["Mezcal", "Llima", "Ginger beer"],
+          glass: "alt", strength: 2, tags: ["Fumat", "Picant"]
         }
       ],
       sense: [
@@ -360,6 +424,18 @@ sitemap: false
           desc: "Verd com el pantà d'en Shrek i molt més bo. Fresc, amb un punt picant de gingebre.",
           ingredients: ["Ginger ale", "Llima", "Menta", "Cogombre", "Gel picat"],
           glass: "alt", tags: ["Refrescant", "Herbaci"]
+        },
+        {
+          name: "Poció de la Fada Padrina",
+          desc: "Rosa, amb bombolles i sospitosament màgica. No et convertirà en princesa (o potser sí).",
+          ingredients: ["Ginger ale", "Suc de nabius", "Gerds", "Llimona"],
+          glass: "copa", tags: ["Afruitat", "Bombolles"]
+        },
+        {
+          name: "El Drac Enamorat",
+          desc: "Vermell intens i amb caràcter: amarg, cítric i amb aroma de romaní.",
+          ingredients: ["Bitter Kas", "Tònica", "Suc de pomelo rosa", "Branca de romaní"],
+          glass: "baix", tags: ["Amarg", "Cítric"]
         }
       ]
     };
@@ -455,6 +531,39 @@ sitemap: false
       setTimeout(tick, 1000);
     }
     tick();
+
+    /* ---------- Música de fons: Fief - II (2016) ---------- */
+    // Els navegadors no deixen sonar música sense que l'usuari toqui alguna cosa,
+    // així que cal prémer el botó per començar.
+    const YT_VIDEO = "DffQVP6UqVQ";
+    const musicBtn = document.getElementById("music");
+    const musicLabel = document.getElementById("music-label");
+    let player;
+
+    window.onYouTubeIframeAPIReady = () => {
+      player = new YT.Player("yt-player", {
+        videoId: YT_VIDEO,
+        playerVars: { playsinline: 1, loop: 1, playlist: YT_VIDEO, controls: 0, disablekb: 1 },
+        events: {
+          onReady: () => { player.setVolume(60); musicBtn.disabled = false; },
+          onStateChange: e => {
+            const playing = e.data === YT.PlayerState.PLAYING;
+            musicBtn.setAttribute("aria-pressed", playing);
+            musicLabel.textContent = playing ? "Fief – II" : "Música";
+          }
+        }
+      });
+    };
+
+    musicBtn.addEventListener("click", () => {
+      if (!player) return;
+      if (player.getPlayerState() === YT.PlayerState.PLAYING) player.pauseVideo();
+      else player.playVideo();
+    });
+
+    const ytScript = document.createElement("script");
+    ytScript.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(ytScript);
 
     /* ---------- Bombolles ---------- */
     const bubbles = document.querySelector(".bubbles");
